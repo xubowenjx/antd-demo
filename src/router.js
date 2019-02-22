@@ -1,41 +1,45 @@
-import World from "./views/world/index";
-import Hello from "./views/hellow/index";
-import Login from "./views/login/index";
-import Desktop from "./components/Layout";
+import World from './views/world/index';
+import Hello from './views/hellow/index';
+import Login from './views/login/index';
+import Desktop from './components/Layout';
 const router = [
   {
-    link: "/login",
+    link: '/login',
     component: Login,
-    text: "login",
+    text: 'login',
+    name: 'login',
     meta: {
-      auth: false
-    }
+      auth: false,
+    },
   },
   {
-    link: "/",
+    link: '/',
     component: Desktop,
-    text: "Desktop",
+    text: 'Desktop',
     meta: {
-      auth: false
+      auth: false,
     },
     children: [
       {
-        link: "/world",
+        link: '/world',
         component: World,
-        text: "World",
+        text: 'World',
+        name: 'world',
+
         meta: {
-          auth: true
-        }
+          auth: true,
+        },
       },
       {
-        link: "/hellow",
+        link: '/hellow',
         component: Hello,
-        text: "Hello",
+        text: 'Hellow',
+        name: 'hellow',
         meta: {
-          auth: true
-        }
-      }
-    ]
-  }
+          auth: true,
+        },
+      },
+    ],
+  },
 ];
 export default router;
