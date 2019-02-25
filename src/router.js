@@ -1,5 +1,6 @@
 import World from './views/world/index';
 import Hello from './views/hellow/index';
+import Child from './views/child/index';
 import Login from './views/login/index';
 import Desktop from './components/Layout';
 const router = [
@@ -25,7 +26,6 @@ const router = [
         component: World,
         text: 'World',
         name: 'world',
-
         meta: {
           auth: true,
         },
@@ -35,9 +35,27 @@ const router = [
         component: Hello,
         text: 'Hellow',
         name: 'hellow',
+        icon: 'tag',
         meta: {
           auth: true,
         },
+      },
+      {
+        text: 'submenus',
+        name: 'submenus',
+        icon: 'tag',
+        meta: {
+          auth: true,
+        },
+        submenu: [
+          {
+            link: '/child',
+            component: Child,
+            text: 'child',
+            name: 'submenus:1',
+            icon: 'tag',
+          },
+        ],
       },
     ],
   },

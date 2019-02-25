@@ -1,3 +1,5 @@
+[![Build Status](https://img.shields.io/travis/xubowenjx/antd-demo.svg)](https://travis-ci.org/xubowenjx/antd-demo)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
